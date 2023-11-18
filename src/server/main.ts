@@ -3,10 +3,10 @@ import ViteExpress from "vite-express";
 
 const app = express();
 
-app.get("/hello", (_, res) => {
-  res.send("Hello Vite + TypeScript!");
+app.get("/hello", (req, res) => {
+  res.json("Hello Vite + TypeScript!");
 });
 
-ViteExpress.listen(app, 3000, () =>
-  console.log("Server is listening on port 3000...")
+ViteExpress.listen(app, 5000, () =>
+  console.log("Server is listening on port 5000...")
 );
